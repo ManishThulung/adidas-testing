@@ -17,9 +17,12 @@ router.get(
   })
 );
 
-router.get("/login", passport.authenticate("google"), {
-  successRedirect: process.env.FRONTEND_URL,
-});
+router.get(
+  "/login",
+  passport.authenticate("google", {
+    successRedirect: process.env.FRONTEND_URL,
+  })
+);
 // router.get(
 //   "/login",
 //   passport.authenticate("google", {
